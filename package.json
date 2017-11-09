@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
+    "start-server": "node /home/panupong/NodeProject/index.js ",
     "test": "nodemon --exec \"mocha --recursive -R min\"",
     "test-watch": "mocha \"test/**/*.js\"",
     "test-watch-server": "mocha \"test/Server_test/*.js\" "
