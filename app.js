@@ -8,6 +8,11 @@ const app = express();
 mongoose.Promise = global.Promise;
 mongoose.connect('mongodb://localhost/Todo');
 
+// ตรวจสอบผลการต่อ Database
+mongoose.connection
+    .once('open', () => console.log('Connected to MongoLab instance.'))
+    .on('error', error => console.log('Error connecting to MongoLab:', error));
+
 //ติดตั้ง json middleware by bodyParser.json
 app.use(bodyParser.json());
 
